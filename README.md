@@ -1,1 +1,1 @@
-Source code was made by TenelBacon for all HTML, CSS, and JS you may take the design/layout of any pages used in our website. PLEASE DO NOT IMPERSONATE US THOUGH!
+Code developed by Tenelbacon and is not open sourced. Stealing tampering or any other form of misuse will result in a ban from this site. Thank You
