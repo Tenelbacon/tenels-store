@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #2c2c2c;
+            color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 1em;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ddd;
+        }
+
+        main {
+            flex: 1;
+            padding: 2em 1em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-section {
+            background-color: #3a3a3a;
+            padding: 2em 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            width: 45%;
+            color: #f4f4f4;
+        }
+
+        .product-item h3 {
+            margin: 0.5em 0;
+        }
+
+        .product-item .price {
+            color: #aaa;
+            margin: 0.5em 0;
+        }
+
+        .product-item button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 0.8em 2em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1em;
+        }
+
+        .product-item button:hover {
+            background-color: #218838;
+        }
+
+        .discord-button {
+            display: inline-block;
+            background-color: #7289DA;
+            color: #fff;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .discord-button:hover {
+            background-color: #5b6eae;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="https://sites.google.com/view/tenels-store/home">Home</a></li>
+                    <li><a href="https://sites.google.com/view/tenels-store/policies">Policies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>Welcome to Tenel's Store!</h2>
+                <p>Find more info below</p>
+            </div>
+        </section>
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="product-list">
+                    <div class="product-item">
+                        <h3>Join our community</h3>
+                        <a href="https://discord.gg/9xH4quSVkW" class="discord-button">Join our Discord</a>
+                    </div>
+                    <div class="product-item">
+                        <h3>Buy Premium Key</h3>
+                        <p>Get access to exclusive features!</p>
+                        <button onclick="window.open('https://www.roblox.com/game-pass/832925139/Premium-Key-Lifetime', '_blank');">Buy Now</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tenel's Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = this.getAttribute('href');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
