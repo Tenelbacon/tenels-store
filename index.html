@@ -140,8 +140,8 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="https://sites.google.com/view/tenels-store/home">Home</a></li>
-                    <li><a href="https://sites.google.com/view/tenels-store/policies">Policies</a></li>
+                    <li><a href="https://tenelbacon.github.io/tenels-store">Home</a></li>
+                    <li><a href="https://tenelbacon.github.io/tenels-store/policies">Policies</a></li>
                 </ul>
             </nav>
         </div>
@@ -164,7 +164,6 @@
                         <h3>Buy Premium Key</h3>
                         <p>Get access to exclusive features!</p>
                         <button onclick="window.open('https://www.roblox.com/game-pass/832925139/Premium-Key-Lifetime', '_blank');">Buy Now</button>
-
                     </div>
                 </div>
             </div>
@@ -180,12 +179,13 @@
             const links = document.querySelectorAll('a');
             links.forEach(link => {
                 link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    window.location.href = this.getAttribute('href');
+                    if (this.getAttribute('href').startsWith('http')) {
+                        event.preventDefault();
+                        window.location.href = this.getAttribute('href');
+                    }
                 });
             });
         });
     </script>
 </body>
 </html>
-
